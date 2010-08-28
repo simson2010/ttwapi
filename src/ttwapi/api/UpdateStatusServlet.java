@@ -42,7 +42,7 @@ public class UpdateStatusServlet extends HttpServlet {
 		String key = request.getParameter("key");
 
 		Twitter twitter = new TwitterFactory().getInstance();
-		//twitter.setOAuthAccessToken("133816406-X1qKnkaFNdNfupndQJ6RkoVczMwr0A17z7KSWdrZ", "QDepl1K0slJVHZLV8c1PWu48Fo9AdBhwz6cLIR0Ozo");
+		
 		twitter.setOAuthConsumer(Configuration.getConsumerKey(), Configuration.getConsumerSecret());
 	
 		//AccessToken accessToken = loadAccessToken(1);
@@ -86,8 +86,7 @@ public class UpdateStatusServlet extends HttpServlet {
 	}
 	
 	private static AccessToken loadAccessToken(int useId){
-	    String token = "133816406-X1qKnkaFNdNfupndQJ6RkoVczMwr0A17z7KSWdrZ";
-	    String tokenSecret = "QDepl1K0slJVHZLV8c1PWu48Fo9AdBhwz6cLIR0Ozo";
+	    
 	    return new AccessToken(token, tokenSecret);
 	  }
 	
